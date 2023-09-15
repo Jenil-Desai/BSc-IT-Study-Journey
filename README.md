@@ -1,12 +1,12 @@
-# BSc.IT Study Records Repository 📘
+# BSc.IT Study Journey Repository 📘
 
-Welcome to my BSc.IT Study Records repository! 🚀 This repository chronicles my exciting journey through the world of computer science and programming. Here, I've meticulously organized my work by semesters, programming languages, projects, and personal notes.
+Welcome to my BSc.IT Study Journey repository! 🚀 This repository chronicles my exciting journey through the world of computer science and programming. Here, I've meticulously organized my work by semesters, programming languages, projects, and personal notes.
 
 Feel free to explore and dive into my academic adventures! 🎓
 
 ## 📁 Folder Structure
 
-- **Bsc.IT/**: The hub of my BSc.IT program study records.
+- **Bsc.IT/**: The hub of my BSc.IT program study Journey.
   - **Semesters/**: A treasure trove of knowledge, organized by semesters.
     - **Semester-1/**, **Semester-2/**, ...: Each semester's highlights and challenges.
       - **Languages/**: Languages that fueled my coding exploration.
