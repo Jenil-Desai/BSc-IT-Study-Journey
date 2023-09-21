@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "GEOMETRI.C": "cpp"
+        "GEOMETRI.C": "cpp",
+        "stdio.h": "c"
     }
 }
