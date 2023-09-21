@@ -18,15 +18,7 @@ This program prints the fidonacci series.
 
 0 1 1 2 3 5
 
-```bash
-# Example output
-$ ./program_name
-Output goes here...
-```
-
 ## How to Run
-
-Explain how to run the program. Include any necessary commands, arguments, or setup instructions.
 
 ```bash
 # Example commands
@@ -36,8 +28,6 @@ $ ./program_name
 ```
 
 ## Dependencies
-
-List any dependencies or prerequisites required to run the program. Include installation instructions if necessary.
 
 - Text Editor
 - C Language Complier
