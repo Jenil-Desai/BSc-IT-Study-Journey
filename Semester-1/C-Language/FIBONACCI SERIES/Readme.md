@@ -1,4 +1,3 @@
-```markdown
 # Fibonacci Series
 
 The program prints fibonacci series with the help of C-Language.
@@ -46,6 +45,3 @@ List any dependencies or prerequisites required to run the program. Include inst
 ## License
 
 This program is licensed under the [Your License Name] License - see the [LICENSE](LICENSE) file in the program folder for details.
-```
-
-Each program folder in your repository would have its own README file following this structure. This way, users can easily navigate to the specific program they are interested in and find information about its output, usage, and dependencies.
