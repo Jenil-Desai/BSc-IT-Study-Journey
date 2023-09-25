@@ -3,6 +3,8 @@
         "GEOMETRI.C": "cpp",
         "stdio.h": "c",
         "FACTORIA.C": "cpp",
-        "NO_MAIN.C": "cpp"
+        "NO_MAIN.C": "cpp",
+        "LENGTH.C": "cpp",
+        "ARMSTRON.C": "cpp"
     }
 }
