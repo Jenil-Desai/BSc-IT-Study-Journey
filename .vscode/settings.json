@@ -2,6 +2,7 @@
     "files.associations": {
         "GEOMETRI.C": "cpp",
         "stdio.h": "c",
-        "FACTORIA.C": "cpp"
+        "FACTORIA.C": "cpp",
+        "NO_MAIN.C": "cpp"
     }
 }
