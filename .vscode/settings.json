@@ -5,6 +5,9 @@
         "FACTORIA.C": "cpp",
         "NO_MAIN.C": "cpp",
         "LENGTH.C": "cpp",
-        "ARMSTRON.C": "cpp"
+        "ARMSTRON.C": "cpp",
+        "GETS-PUT.C": "cpp",
+        "MATH.C": "cpp",
+        "PALINDROM.C": "cpp"
     }
 }
