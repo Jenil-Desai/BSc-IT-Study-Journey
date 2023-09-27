@@ -19,6 +19,11 @@ Feel free to explore and dive into my academic adventures! 🎓
 - To explore a specific semester, venture to `Bsc.IT/Semesters/Semester-X/`.
 - Diving into coding languages and projects? They reside within their respective subfolders.
 - Unlock the wisdom of my notes by opening the `Notes/` subfolder.
+- Terms to be known
+  - NANR : No argument no return value.
+  - WANR : With argument no return value.
+  - NAWR : No arguement with return value.
+  - WAWR : With argument with return value.
 
 ## 💡 Usage
 
