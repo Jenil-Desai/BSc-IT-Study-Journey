@@ -8,6 +8,9 @@
         "ARMSTRON.C": "cpp",
         "GETS-PUT.C": "cpp",
         "MATH.C": "cpp",
-        "PALINDROM.C": "cpp"
+        "PALINDROM.C": "cpp",
+        "ODD-EVEN.C": "cpp",
+        "main.C": "cpp",
+        "ODD-EVEN (WAWR).C": "cpp"
     }
 }
