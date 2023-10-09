@@ -1,14 +1,14 @@
-		   //Header file declartion.
+//Header file declartion.
 #include<stdio.h>
 #include<conio.h>
 #include<process.h>
-		   //Global Variable Declartion.
+//Global Variable Declartion.
 long int total=0;      //Total of selected products.
 int ptry=0;            //Counts No. of trys of password.
-int pass=0;	       //Pass for idetification of pass.
-		   //Functions Declartion.
-void cred();
-void homepage();       //Homepage
+int pass=0;	       //Pass for idetification of Luxe.
+//Functions Declartion.
+void cred();           //Creditional Page
+void homepage();       //Homepage Page
 void Smartphone();     //Smartphone Page
 void Television();     //Television Page
 void Laptop();         //Laptop Page
@@ -39,27 +39,27 @@ void cred()
 	}
 	else
 	{
-		exit(0);
+		exit(0); //Exit the program if 5 trys is reched.
 	}
 
 	if(p==9115 || p==8103)
 	{
-		homepage();
+		homepage(); //Goes To Homepage function if password is correct.
 	}
 	else
 	{
-		ptry++;
+		ptry++; //Counts Password Trys.
 		printf("You have %d try remaining!",5-ptry);
 		printf("Retry or Exit [Y-1/N-2] : ");
 		scanf("%d",&opt);
 
 		if(opt==1)
 		{
-			main();
+			main(); //If 1 then again password try.
 		}
 		else
 		{
-			exit(0);
+			exit(0); //If 2 then exit the program.
 		}
 	}
 }
@@ -147,7 +147,7 @@ void Smartphone()
 		printf("Qty : ");
 		scanf("%d",&qty);
 
-		total=1000*qty+total;
+		total=1000*qty+total;  //process of multiplication of qty and product price to total variable.
 
 		printf("Do You Want To Buy Anything Else? [Y-1/N-2] : ");
 		scanf("%d",&opt);
@@ -535,7 +535,7 @@ void Printer()
 }
 void Pass()
 {
-	int opt,product,qty;
+	int opt,product;
 	clrscr();
 
 	printf("\t\t\t===============================");
@@ -561,11 +561,11 @@ void Pass()
 		printf("\n\nSelect Product : ");
 		scanf("%d",&product);
 
-		if(product==1)
+		if(product==1) //Condition for checking if user has buyed luxe or not.
 		{
 
 			total=200*1+total;
-			pass=1;
+			pass=1; //Sets pass variable to 1 for iden. of pass at billing.
 
 			printf("Do You Want To Buy Anything Else? [Y-1/N-2] : ");
 			scanf("%d",&opt);
@@ -635,7 +635,7 @@ void Pass()
 			Pass();
 		}
 	}
-	else
+	else //If User has already buyed the luxe then below is showed.
 	{
 		printf("\n\nYou Have Already Buyed An Pass.");
 		printf("\n\nDo You Want To Go Homepage / Exit? [Y-1/N-2] : ");
@@ -658,11 +658,11 @@ void Pass()
 void Billing()
 {
 	int taxes;  //taxes for counting 18% tax on amount.
-	float discount;        //discount for counting discount.
-	long int total1=total; //Storing Total.
+	float discount;        //discount for counting discount based on luxe.
+	long int total1=total; //Storing Total for printing at last.
 	clrscr();
 
-	if(pass==1)
+	if(pass==1) //Iden. luxe and calculates dicount according.
 	{
 		discount=total*0.02;
 		total=total-discount;
@@ -682,7 +682,7 @@ void Billing()
 		discount=0;
 	}
 
-	taxes=total*0.18;
+	taxes=total*0.18; //Calculates the tax on discounted price total.
 
 	printf("\t\t\t===============================");
 	printf("\n\t\t\tWelcome To Anjali Infocom India");
