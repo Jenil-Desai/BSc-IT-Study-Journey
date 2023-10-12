@@ -16,6 +16,8 @@
         "AII.C": "cpp",
         "KBC.C": "cpp",
         "INRTODOL.C": "cpp",
-        "AREA.C": "cpp"
+        "AREA.C": "cpp",
+        "MAIN-19.C": "cpp",
+        "REVERSE.C": "cpp"
     }
 }
