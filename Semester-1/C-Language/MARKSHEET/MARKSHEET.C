@@ -61,15 +61,15 @@ main()
         }
         else
         {
-            printf("Percentage : *");
-            printf("\nGrade : -");
+            printf("Percentage : **");
+            printf("\nGrade : ---");
             printf("\nResult : Fail");
         }
     }
     else
     {
-        printf("Percentage : *");
-        printf("\nGrade : -");
+        printf("Percentage : **");
+        printf("\nGrade : ---");
         printf("\nResult : Fail");
     }
     return 0;
