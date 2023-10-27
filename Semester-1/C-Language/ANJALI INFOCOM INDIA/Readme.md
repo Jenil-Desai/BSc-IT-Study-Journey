@@ -1,6 +1,6 @@
 # Anjali Infocom India Shopping Experience
 
-The program simulates a shopping experience for Anjali Infocom India. This program is designed to run in Turbo C++. Users can navigate through various product categories and make purchases. The program involves a simple authentication system, multiple product categories such as smartphones, televisions, laptops, and printers, as well as a luxury pass option for additional benefits.
+This code snippet is a program for an online shopping experience. It allows users to select different categories of products, such as smartphones, televisions, laptops, and printers. Users can choose a specific product within each category and enter the quantity they want to purchase. The program calculates the total amount based on the selected products and quantities, applies discounts for certain products, and adds taxes. Finally, it displays the billing details to the user.
 
 ## Table of Contents
 
@@ -11,7 +11,15 @@ The program simulates a shopping experience for Anjali Infocom India. This progr
 
 ## Program Overview
 
-This program offers a simulated shopping experience for Anjali Infocom India. It involves a basic authentication system, various product categories such as smartphones, televisions, laptops, and printers, along with a luxury pass option for additional benefits. Users can select products, view prices, add them to the cart, and proceed to the billing section for payment.
+The program starts by displaying a welcome message and calling the cred() function.
+The cred() function prompts the user to enter a password. If the password is correct, the program proceeds to the homepage() function. Otherwise, it allows the user to retry the password or exit the program.
+The homepage() function displays the available categories and prompts the user to select one.
+Based on the user's selection, the program calls the corresponding function (Smartphone(), Television(), Laptop(), Printer(), or Pass()).
+Each category function displays the available products and prompts the user to select one. The program then asks for the quantity of the selected product.
+The program calculates the total amount based on the product price and quantity, and updates the total variable.
+After each product selection, the program asks the user if they want to buy anything else or proceed to billing.
+If the user wants to buy more products, the program returns to the homepage() function. If the user wants to proceed to billing, the program calls the Billing() function.
+The Billing() function calculates the discount based on the selected luxe product (if any), adds taxes, and displays the billing details to the user.
 
 ## How to Run
 
