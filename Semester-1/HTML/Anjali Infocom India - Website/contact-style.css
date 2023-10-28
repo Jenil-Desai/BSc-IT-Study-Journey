@@ -1,0 +1,17 @@
+h1{
+    display: inline;
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'sans-serif';
+}
+
+td { 
+    width: 150px;
+    text-align: center;
+}
+
+.align-left {
+            text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
