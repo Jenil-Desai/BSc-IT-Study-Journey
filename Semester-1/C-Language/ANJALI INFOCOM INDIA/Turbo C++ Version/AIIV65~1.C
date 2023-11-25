@@ -1,7 +1,7 @@
 /*========================================
   ANJALI INFOCOM INDIA CLI SHOPPING EXP..
-  VERSION 6.5
-  DEVLOPED BY JENIL DESAI M.
+  VERSION CLI.6.6
+  DEVLOPED BY JENIL M. DESAI
   DEVLOPED IN C-LANGUAGE
   =========================================*/
 
@@ -49,6 +49,8 @@ void main()
 	strcpy(products[3][1], "Epson L100 (Rs. 5000)");
 	strcpy(products[3][2], "HP Deskjet 108W (Rs. 4000)");
 
+	pass=0;
+	total=0;
 
 	cred();
 
@@ -71,6 +73,8 @@ void cred()
 		if(p==9115 && strcmp(u,ru)==0)
 		{
 			ptry=5;
+			printf("\n\n\t\t\t     ---Login Sucessful---");
+			getch();
 			homepage();
 		}
 		else
@@ -152,6 +156,8 @@ void homepage()
 	}
 	else if(category==6)
 	{
+		printf("\n\n\t\t\t\t---Have a Nice Day---");
+		getch();
 		exit(0);
 	}
 	else if(category==7)
@@ -733,7 +739,7 @@ void Pass()
 	}
 	else
 	{
-		printf("\n\nYou Have Already Buyed An Pass.");
+		printf("\n\n\t\t    ---You Have Already Buyed An Pass---");
 		printf("\n\nDo You Want To Go Homepage / Exit? [Y-1/N-2] : ");
 		scanf("%d",&opt);
 
@@ -764,6 +770,8 @@ void admin_dashboard()
 
 		if(p==9115)
 		{
+			printf("\n\n\t\t\t\t---Welcome Admin---");
+			getch();
 			at:
 			clrscr();
 			printf("\t\t\t===============================");
@@ -775,8 +783,8 @@ void admin_dashboard()
 			printf("\n\t\t\t\t  ===============\n\n\n");
 
 			strcpy(category[0], "Smartphone");
-			strcpy(category[1], "Laptop");
-			strcpy(category[2], "Television");
+			strcpy(category[1], "Television");
+			strcpy(category[2], "Laptop");
 			strcpy(category[3], "Printer");
 
 			for(i=0;i<4;i++)
@@ -845,31 +853,37 @@ void admin_dashboard()
 }
 void Billing()
 {
-	int taxes;  //taxes for counting 18% tax on amount.
+	int taxes,option;  //taxes for counting 18% tax on amount.
 	float discount;        //discount for counting discount.
 	long int total1=total; //Storing Total.
 	clrscr();
 
-	if(pass==1)
-	{
-		discount=total*0.02;
-		total=total-discount;
-	}
-	else if(pass==2)
-	{
-		discount=total*0.05;
-		total=total-discount;
-	}
-	else if(pass==3)
-	{
-		discount=total*0.1;
-		total=total-discount;
-	}
-	else
+	if(pass!=0 && total<=1000)
 	{
 		discount=0;
 	}
-
+	else
+	{
+		if(pass==1)
+		{
+			discount=total*0.02;
+			total=total-discount;
+		}
+		else if(pass==2)
+		{
+			discount=total*0.05;
+			total=total-discount;
+		}
+		else if(pass==3)
+		{
+			discount=total*0.1;
+			total=total-discount;
+		}
+		else
+		{
+			discount=0;
+		}
+	}
 	taxes=total*0.18;
 
 	printf("\t\t\t===============================");
@@ -878,11 +892,39 @@ void Billing()
 
 	printf("\n--------Billing-------");
 	printf("\nGross Amount : %ld",total1);
-	printf("\nDiscount     : %.2f",discount);
+	if(pass!=0 && total<=1000)
+	{
+		printf("\nDiscount     : 0.00 \%");
+	}
+	else
+	{
+		printf("\nDiscount     : %.2f \%",discount);
+	}
 	printf("\nNet Amount   : %ld",total);
-	printf("\nTaxes (18%)  : %d",taxes);
+	printf("\nTaxes        : %d",taxes);
 	printf("\nTotal Amount : %ld",total+taxes);
 	printf("\n----------------------");
+
+	if(pass!=0 && total<=1000)
+	{
+		printf("\n\n\t\t\t---Only Pass So No Discount---");
+	}
+
+	printf("\n\nShop Again [Y-1/N-2]: ");
+	scanf("%d",&option);
+
+	if(option==1)
+	{
+		main();
+	}
+	else if(option==2)
+	{
+		exit(0);
+	}
+	else
+	{
+		Billing();
+	}
 
 	printf("\n\n\t\t=============================================");
 	printf("\n\t\tThanks For Shopping with Anjali Infocom India");
