@@ -1,0 +1,88 @@
+<html lang="eng">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial scale=1.0">
+		<title>Admission Form</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<p>Form 1</p>
+			</div>
+			<form action="#" method="get" name="admission-form">
+				<h3>Admission Form</h3>
+				<table>
+					<tr>
+						<td>
+							<label for="fname">Full Name :</label>
+						</td>
+						<td>
+							<input type="text" id="fname">
+							<input type="text" id="fname">
+							<input type="text" id="fname">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="gen">Gender :</label>
+						</td>
+						<td>
+							<input type="radio" id="gen" name="gen" value="m">Male<br>
+							<input type="radio" id="gen" name="gen" value="f">Female
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="add">Address :</label>
+						</td>
+						<td>
+							<textarea id="add"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="stream">Stream :</label>
+						</td>
+						<td>
+							<input type="radio" id="stream" value="a" name="stream">Arts
+							<input type="radio" value="c" name="stream">Commerce
+							<input type="radio" value="s" name="stream">Science
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="hob">Hobbies :</label>
+						</td> 
+						<td>
+							<input type="checkbox" id="hob" name="hob" value="m">Music
+							<input type="checkbox"  name="hob" value="s">Sports
+							<input type="checkbox"  name="hob" value="r">Reading
+							<input type="checkbox"  name="hob" value="t">Traveller
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="course">Admission For :</label>
+						</td>
+						<td>
+							<select>
+								<option>BCA</option>
+								<option>BBA</option>
+								<option>BSC(IT)</option>
+								<option>PGDCA</option>
+								<option>B.com</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button type="submit">Ok</button>
+							<button type="reset" id="clr">Clear</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

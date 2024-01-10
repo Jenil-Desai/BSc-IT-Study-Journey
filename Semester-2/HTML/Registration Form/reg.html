@@ -1,0 +1,122 @@
+<html lang="eng">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial scale=1.0">
+		<title>Form With CSS</title>
+		<style>
+			label{
+				margin-left: 10px;
+			}
+			h3{
+				margin-left: 10px;
+			}
+			textarea{
+				margin-left: 10px;
+			}
+			#submit{
+				margin-left: 170px;
+				background-color: rgb(255,150,14);
+				border-radius: 10px;
+				height: 28px;
+				width: 120px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 500px; background-color: cyan; border: 5px solid black;">
+			<form action="#" name="Registration Form" method="get">
+				<h2 style="text-align: center; color: red;">Registration Form</h2>
+				<h3 style="color: red">Personal Details</h3>
+				<table>
+					<tr>
+						<td>
+							<label for="fname">First Name :</label>
+						</td>
+						<td>
+							&emsp;&emsp;<input type="text" id="fname" placeholder="Enter Your First Name">
+						</td>
+						<br>
+					</tr>
+					<tr>
+						<td>
+							<label for="lname">Last Name :</label>
+						</td>
+						<td>
+							&emsp;&emsp;<input type="text" id="lname" placeholder="Enter Your Last Name">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="gender">Gender :</label>
+						</td>
+						<td>
+							&emsp;&emsp;<input type="radio" id="gender" value="m" name="gender">Male
+							<input type="radio" id="gender" value="f" name="gender">Female
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="num">Contact :</label>
+						</td>
+						<td>
+							&emsp;&emsp;<input type="number" id="num" placeholder="Enter Contact Number">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="hob">Hobbies :</label>
+						</td>
+						<td>
+							&emsp;&emsp;<input type="checkbox" id="hob" name="hob" value="R">Reading
+							<input type="checkbox" id="hob" name="hob" value="S">Singing
+							<input type="checkbox" id="hob" name="hob" value="D">Dancing
+						</td>
+					</tr>
+				</table>
+				<h3 style="color: red">Education Qualification</h3>
+				<table>
+					<tr>
+						<td>
+							<label for="Deg">Degree</label>
+						</td>
+						<td>
+							&emsp;&emsp;<select id="Deg">
+								<option>Under Gradute</option>
+								<option>Post Gradute</option>
+								<option>Diploma</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="qua">Qualification</label>
+						</td>
+						<td>
+							&emsp;&emsp;<select id="Deg">
+								<option>BCA</option>
+								<option>BSC</option>
+								<option>B.Com</option>
+								<option>BBA</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<h3 style="color: red">Address</h3>
+				<textarea></textarea>
+				<table>
+					<tr>
+						<td>
+							<label for="file">Attach Resume :</label>
+						</td>
+						<td>
+							&emsp;<input type="file" id="file">
+						</td>
+					</tr>
+				</table>
+				<br>
+				<button type="submit" id="submit">SUBMIT</button>
+			</form>
+		</div>
+	</body>
+</html>
