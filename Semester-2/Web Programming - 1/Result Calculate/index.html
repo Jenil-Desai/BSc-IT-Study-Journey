@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate Result</h1>
+        <form action="#">
+            <table class="input-table">
+                <tr>
+                    <td><label for="ds">Data Sturture</label></td>
+                    <td><input type="number" name="ds" id="ds"></td>
+                </tr>
+                <tr>
+                    <td><label for="wp">Web Programming</label></td>
+                    <td><input type="number" name="wp" id="wp"></td>
+                </tr>
+                <tr>
+                    <td><label for="math">Maths</label></td>
+                    <td><input type="number" name="math" id="math"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" id="submit">Calculate</button>
+                        <button type="reset" id="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table class="result-table">
+            <tr>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+                <th>Result</th>
+                
+            </tr>
+            <tr>
+                <td id="total"></td>
+                <td id="per"></td>
+                <td id="grade"></td>
+                <td id="res"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

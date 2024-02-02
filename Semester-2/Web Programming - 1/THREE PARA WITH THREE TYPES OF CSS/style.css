@@ -1,0 +1,11 @@
+#external{
+	border: 3px inset #EB6440;
+	color: #D6E4E5;
+	background-color: 497174;
+	font-size: 25px;
+	padding: 5px 5px;
+	overflow-y: scroll;
+	width: 200px;
+	height: 200px;
+	font-family: Genos;
+}

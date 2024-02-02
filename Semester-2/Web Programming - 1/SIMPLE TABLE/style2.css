@@ -1,0 +1,38 @@
+table{
+	border: 3px solid blue;
+	text-align: center;
+}
+
+td{
+	text-wrap: wrap;
+}
+
+.white{
+	background-color: white;
+	color: black;
+}
+
+.mendi{
+	background-color: rgb(128,120,64);
+	color: black;
+}
+
+.black{
+	background-color: black;
+	color: white;
+}
+
+.brown{
+	background-color: brown;
+	color: white;
+}
+
+.yellow{
+	background-color: yellow;
+	color: black;
+}
+
+.orange{
+	background-color: orange;
+	color: black;
+}

@@ -1,0 +1,25 @@
+table{
+	border-bottom: 10px groove pink;
+	border-top: 10px groove pink;
+}
+
+th{
+	border: 3px outset rgb(128,0,64);
+	background-color: #9a75aa;
+	color: white;
+	font-weight: 100;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+td{
+	border: 2px inset white;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: bolder;
+}
+
+table{
+	background-color: #dfbaca;
+	padding: 10px;
+}

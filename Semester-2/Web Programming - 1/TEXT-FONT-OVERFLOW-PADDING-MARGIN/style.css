@@ -1,0 +1,41 @@
+.main{
+	width: 100%;
+	height: 300px;
+	background-color: rgb(189,4,87);
+}
+
+.first,.mid,.last{
+	color: white;
+	text-align: justify;
+}
+
+.first{
+	line-height: 18px;
+	font-style: italic;
+	margin-left: 410px;
+}
+
+.mid{
+	width: 500px;
+	height: 70px;
+	line-height: 25px;
+	text-transform: capitalize;
+	margin-left: 30%;
+	margin-top: 25px;
+	padding-bottom: 50px;
+}
+
+.last{
+	height: 105px;
+	line-height: 35px;
+	text-transform: capitalize;
+	text-decoration: overline;
+	background-image: url("bg.jpg");
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: repeat-x;
+}
+
+.last p{
+	margin-right: 30%;
+}

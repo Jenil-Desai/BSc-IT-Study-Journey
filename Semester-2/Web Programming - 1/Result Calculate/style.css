@@ -1,0 +1,43 @@
+.container{
+    width: 30%;
+    height: 250px;
+    background-color: #add9e6;
+    border: 2px solid #46575e;
+}
+
+h1{
+    text-align: center;
+    color: #46575e;
+    margin-top: 10px;
+}
+
+.input-table{
+    margin: 20px 21%;
+}
+
+button{
+    color: white;
+    background-color: #46575e;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 9px;
+    margin-top: 9px;
+}
+
+button[type="submit"]{
+    margin-left: 25%;
+    margin-right: 25px;
+}
+
+.result-table{
+    margin: 20px 20%;
+    border-spacing: 20px 0;
+}
+
+th{
+    color: #46575e;
+}
+
+.result-table td{
+    text-align: center;
+}
