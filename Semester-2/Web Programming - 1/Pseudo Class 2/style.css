@@ -1,0 +1,23 @@
+table{
+	width: 100px;
+	height: 100px;
+	background-color: #AEDEFC;
+	border: 3px solid #FFF6F6;
+	padding: 10px;
+}
+
+td{
+	background-color: #FFDFDF;
+	border: 2px solid #F875AA;
+	padding: 4px 20px;
+	transition: background-color 1s linear 0s;
+}
+
+td:hover{
+	background-color: #F875AA;
+	border: 2px solid #FFDFDF;
+	color: #7D7C7C;
+}
+
+
+

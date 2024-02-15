@@ -1,0 +1,19 @@
+div{
+	width: 500px;
+	height: 500px;
+	background-image: url("image.jpg");
+	background-size: cover;
+	background-position: center center;
+	opacity: 0.5;
+	border: 5px solid blue;
+	transition: opacity 1s ease-in-out 5s;
+	transition: border 1s ease-in-out 0s;
+	transition: border-radius 2s ease-in-out 0s;
+}
+
+div:hover{
+	opacity: 1;
+	border: 5px solid pink;
+	border-radius: 50%;
+}
+
