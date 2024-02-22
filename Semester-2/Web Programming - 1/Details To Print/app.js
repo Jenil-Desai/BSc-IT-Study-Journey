@@ -8,12 +8,6 @@ let mail = document.querySelector('#mail');
 
 let result = document.querySelector('.result');
 
-// let rfirstName = document.querySelector('#r-fname'); 
-// let rlastName = document.querySelector('#r-lname');
-// let rpass = document.querySelector('#r-pass');
-// let rnum = document.querySelector('#r-num');
-// let rmail = document.querySelector('#r-mail');
-
 submitBtn.addEventListener("click",function (event) {
     event.preventDefault();
     let cnt=0;

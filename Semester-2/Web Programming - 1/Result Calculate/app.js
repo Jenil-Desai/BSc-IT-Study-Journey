@@ -32,7 +32,7 @@ submitBtn.addEventListener("click", function (event) {
     } else if (per >= 60 && per <= 69) {
         gradeDisplay.innerHTML = "D";
     } else {
-        gradeDisplay.innerHTML = "F";
+        gradeDisplay.innerHTML = "E";
     }
 
     if (FinaleDS >= 32 && FinaleWP >= 32 && FinaleMath >= 32) {
@@ -48,4 +48,5 @@ resetBtn.addEventListener("click", function () {
     perDisplay.innerHTML = "";
     gradeDisplay.innerHTML = "";
     resDisplay.innerHTML = "";
+    ds.focus();
 });

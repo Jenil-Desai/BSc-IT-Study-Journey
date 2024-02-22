@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog Box</title>
+  </head>
+  <body>
+    <script>
+      var choice = prompt("1). Addition | 2). Subtraction | 3). Multiplication | 4). Division");
+      choice = parseInt(choice);
+
+      switch (choice) {
+        case 1:
+          var num1 = prompt("Enter 1st Value");
+          var num2 = prompt("Enter 2nd Value ");
+          num1 = parseInt(num1);
+          num2 = parseInt(num2);
+          var sum = num1 + num2;
+          alert(`SUM :  ${sum}`);
+          break;
+        case 2:
+          var num1 = prompt("Enter 1st Value");
+          var num2 = prompt("Enter 2nd Value ");
+          num1 = parseInt(num1);
+          num2 = parseInt(num2);
+          var sum = num1 - num2;
+          alert(`SUM :  ${sum}`);
+          break;
+        case 3:
+          var num1 = prompt("Enter 1st Value");
+          var num2 = prompt("Enter 2nd Value ");
+          num1 = parseInt(num1);
+          num2 = parseInt(num2);
+          var sum = num1 * num2;
+          alert(`SUM :  ${sum}`);
+          break;
+        case 4:
+          var num1 = prompt("Enter 1st Value");
+          var num2 = prompt("Enter 2nd Value ");
+          num1 = parseInt(num1);
+          num2 = parseInt(num2);
+          var sum = num1 + num2;
+          alert(`SUM :  ${sum}`);
+          break;
+        default:
+          alert("Invalid Choice");
+          break;
+      }
+    </script>
+  </body>
+</html>
