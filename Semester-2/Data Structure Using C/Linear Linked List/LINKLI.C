@@ -187,6 +187,83 @@ void delp()
 	}
 }
 
+void sort()
+{
+	if(first==NULL)
+	{
+		printf("\nNo Record Found");
+	}
+	else
+	{
+		int *z,i=0,j,swap;
+		z = (int*)calloc(cnt,sizeof(int));
+
+		temp=first;
+		while(temp!=NULL)
+		{
+			z[i]=temp->data;
+			temp=temp->next;
+			i++;
+		}
+
+		for(i=0;i<cnt;i++)
+		{
+			for(j=0;j< (cnt-1) ;j++)
+			{
+				if(z[j] > z[j+1])
+				{
+					swap=z[j];
+					z[j]=z[j+1];
+					z[j+1]=swap;
+				}
+			}
+		}
+
+		for(i=0;i<cnt;i++)
+		{
+			printf("\n(%d). %d",i+1,z[i]);
+		}
+
+		free(z);
+	}
+}
+
+void updt()
+{
+	if(first==NULL)
+	{
+		printf("\n\tNo Record Found");
+	}
+	else
+	{
+		int uv,flag=0;
+
+		printf("\n\tEnter Value : ");
+		scanf("%d",&uv);
+		temp=first;
+
+		while(temp!=NULL)
+		{
+			if(uv==temp->data)
+			{
+				printf("\n\tEnter New Value : ");
+				scanf("%d",&temp->data);
+				flag=1;
+			}
+			temp=temp->next;
+		}
+
+		if(flag==0)
+		{
+			printf("\n\tValue %d Not Found...",uv);
+		}
+		else
+		{
+			printf("\n\tOne Value Updated");
+		}
+	}
+}
+
 void main()
 {
 	int ch,dc;
@@ -199,7 +276,10 @@ void main()
 		printf("\n2). Delete Data");
 		printf("\n3). Display Data");
 		printf("\n4). Search Data");
-		printf("\n5). Exit");
+		printf("\n5). Sort Data");
+		printf("\n6). Update Data");
+		printf("\n7). Count Data");
+		printf("\n8). Exit");
 
 		printf("\n\nEnter Choice : ");
 		scanf("%d",&ch);
@@ -234,6 +314,7 @@ void main()
 					}
 				}
 				break;
+
 			case 3:
 				disp();
 				break;
@@ -241,6 +322,22 @@ void main()
 				srch();
 				break;
 			case 5:
+				sort();
+				break;
+			case 6:
+				updt();
+				break;
+			case 7:
+				if(first==NULL)
+				{
+					printf("\n\tTotal Record : 0");
+				}
+				else
+				{
+					printf("\n\tTotal Record : %d",cnt);
+				}
+				break;
+			case 8:
 				exit();
 			default:
 				printf("\n\n\tInvalid Choice...");
