@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>NavBar</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: calibri;
+			}
+			
+			.navbar{
+				width: 98%;
+				height: 35px;
+				background: transparent;
+				background-color: rgba(0,0,0,.3);
+				backdrop-filter: blur(5px);
+				border-radius: 29px;
+				margin: auto;
+				margin-top: 10px;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.logo{
+				padding-top: 3px;
+				padding-left: 15px;
+			}
+			
+			.navlinks ul{
+				display: flex;
+				justify-content: space-between;
+				gap: 15px;
+				list-style: none;
+			}
+			
+			.navlinks ul li{
+				padding-top: 6px;
+				padding-right: 19px;
+			}
+			
+			.navlinks ul li a{
+				text-decoration: none;
+				color: black;
+				transition: .5s;
+			}
+			
+			.navlinks ul li a:hover{
+				text-decoration: underline 1px white;
+				color: white;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="logo">
+				<h2>Coding Lab</h2>
+			</div>
+			<div class="navlinks">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">HTML-CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
