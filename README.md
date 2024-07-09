@@ -10,9 +10,9 @@ Feel free to explore and dive into my academic adventures! 🎓
   - **Semesters/**: A treasure trove of knowledge, organized by semesters.
     - **Semester-1/**, **Semester-2/**, ...: Each semester's highlights and challenges.
       - **Languages/**: Languages that fueled my coding exploration.
-       - **Projects/**: Showcasing my creativity and problem-solving skills.
-        - **Notes/**: Insights and epiphanies captured for future reference.
-         - **Files/**: Miscellaneous resources and downloads.
+      - **Projects/**: Showcasing my creativity and problem-solving skills.
+      - **Notes/**: Insights and epiphanies captured for future reference.
+      - **Files/**: Miscellaneous resources and downloads.
 
 ## 🚀 Quick Navigation
 
@@ -24,6 +24,18 @@ Feel free to explore and dive into my academic adventures! 🎓
   - WANR : With argument no return value.
   - NAWR : No arguement with return value.
   - WAWR : With argument with return value.
+
+## 🆚 Versions Releases
+
+You Can Checkout The Full Version Info On Notion Page. Version Info Includes following Info :
+
+- Version Name
+- Version Code
+- Version Changes
+- Version Release Date
+- Detailed Past Version Changes
+
+Notion Version Release Site : [Click To View](https://decorous-boar-5cd.notion.site/Version-Releases-Bsc-Information-Technology-ec34a1a540e14da7b6ef3ddcc8079a40?pvs=4)
 
 ## 💡 Usage
 
