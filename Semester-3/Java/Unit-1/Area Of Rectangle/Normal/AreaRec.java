@@ -1,3 +1,4 @@
+package Normal;
 import java.util.Scanner;
 
 class AreaRec {
