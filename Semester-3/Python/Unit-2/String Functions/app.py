@@ -1,0 +1,16 @@
+x = " Atmiya University "
+
+print(f"Count = {x.count("a")}")
+print(f"Length = {len(x)}")
+print(f"Title Case = {x.title()}")
+print(f"Lower Case = {x.lower()}")
+print(f"Upper Case = {x.upper()}")
+print(f"Is Title Case = {x.istitle()}")
+print(f"Is Lower Case = {x.islower()}")
+print(f"Is Upper Case = {x.isupper()}")
+print(f"Strip = {x.strip()}")
+print(f"RStrip = {x.rstrip()}")
+print(f"LStrip = {x.lstrip()}")
+print(f"Find = {x.find("m")}")
+print(f"RFind = {x.rfind("r")}")
+print(f"Is Alpha Numeric = {x.isalpha()}")

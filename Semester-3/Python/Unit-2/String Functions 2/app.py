@@ -1,0 +1,16 @@
+s = "ATMIYA UNIVERSITY"
+
+print(f"1. {s}")
+print(f"2. {s[2:]}")
+print(f"3. {s[0:2]}")
+print(f"4. {s[3:10]}")
+print(f"5. {s[len(s)-1]}")
+print(f"6. {s[len(s)-2]}")
+print(f"7. {s[7:-2]}")
+print(f"8. {s[::-1]}")
+print(f"9. {s[4:9][::-1]}")
+print(f"10. {s[::2]}")
+print(f"11. {s[2::]}")
+print(f"12. {len(s)}")
+print(f"13. {s.lower()}")
+print(f"14. {s.title()}")
