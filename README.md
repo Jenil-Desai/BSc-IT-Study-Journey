@@ -35,7 +35,7 @@ You Can Checkout The Full Version Info On Notion Page. Version Info Includes fol
 - Version Release Date
 - Detailed Past Version Changes
 
-Notion Version Release Site : [Click To View](https://decorous-boar-5cd.notion.site/Version-Releases-Bsc-Information-Technology-ec34a1a540e14da7b6ef3ddcc8079a40?pvs=4)
+Notion Version Release Site : [Click To View](https://jenil-desai.notion.site/Version-Releases-Bsc-Information-Technology-ec34a1a540e14da7b6ef3ddcc8079a40?pvs=4)
 
 ## 💡 Usage
 
