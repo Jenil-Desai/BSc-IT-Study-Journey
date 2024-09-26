@@ -22,7 +22,8 @@ print(split)
 
 print(np.where(arr == 4))
 
-print(arr.sort())
+rev_sort = np.sort(arr)
+print(rev_sort[::-1])
 
 x = [True,False,True,False,True,False,True,False]
 newarr = arr[x]
