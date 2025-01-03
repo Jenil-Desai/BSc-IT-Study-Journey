@@ -2,3 +2,8 @@
 bin
 *.BAK
 *.class
+/Semester-4/Java/dbconnection/target/
+/Semester-4/Java/Unit-1/createTable/nbproject/private/
+/Semester-4/Java/Unit-1/createTable/build/
+/Semester-4/Java/Unit-1/insertDataIntoTable/nbproject/private/
+/Semester-4/Java/Unit-1/insertDataIntoTable/build/
