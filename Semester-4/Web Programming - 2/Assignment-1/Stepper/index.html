@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stepper Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hidden-step {
+        display: none;
+      }
+      .active-step {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
+      <div id="step-1" class="step active-step">
+        <h2 class="text-xl font-semibold mb-4">Step 1: Personal Information</h2>
+        <form id="step-1-form">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+
+          <button type="button" onclick="nextStep(2)" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Next</button>
+        </form>
+      </div>
+
+      <div id="step-2" class="step hidden-step">
+        <h2 class="text-xl font-semibold mb-4">Step 2: Address Information</h2>
+        <form id="step-2-form">
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <input type="text" id="address" name="address" class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+
+          <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+          <input type="text" id="city" name="city" class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+
+          <button type="button" onclick="previousStep(1)" class="mt-4 px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600">Previous</button>
+          <button type="button" onclick="nextStep(3)" class="mt-4 ml-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Next</button>
+        </form>
+      </div>
+
+      <div id="step-3" class="step hidden-step">
+        <h2 class="text-xl font-semibold mb-4">Step 3: Review and Submit</h2>
+        <div class="mb-4">
+          <p><strong>Name:</strong> <span id="review-name"></span></p>
+          <p><strong>Email:</strong> <span id="review-email"></span></p>
+          <p><strong>Address:</strong> <span id="review-address"></span></p>
+          <p><strong>City:</strong> <span id="review-city"></span></p>
+        </div>
+
+        <button type="button" onclick="previousStep(2)" class="mt-4 px-6 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600">Previous</button>
+        <button type="submit" onclick="submitForm(event)" class="mt-4 ml-4 px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Submit</button>
+      </div>
+
+      <div id="result-card" class="hidden-step mt-10 p-5 bg-gray-200 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Submitted Details</h2>
+        <p><strong>Name:</strong> <span id="result-name"></span></p>
+        <p><strong>Email:</strong> <span id="result-email"></span></p>
+        <p><strong>Address:</strong> <span id="result-address"></span></p>
+        <p><strong>City:</strong> <span id="result-city"></span></p>
+      </div>
+    </div>
+
+    <script>
+      let formData = {
+        name: "",
+        email: "",
+        address: "",
+        city: "",
+      };
+
+      function nextStep(stepNumber) {
+        const currentStep = document.querySelector(".step.active-step");
+        const nextStep = document.getElementById(`step-${stepNumber}`);
+
+        if (validateForm(currentStep)) {
+          currentStep.classList.add("hidden-step");
+          currentStep.classList.remove("active-step");
+          nextStep.classList.remove("hidden-step");
+          nextStep.classList.add("active-step");
+          if (stepNumber === 3) {
+            displayReview();
+          }
+        }
+      }
+
+      function previousStep(stepNumber) {
+        const currentStep = document.querySelector(".step.active-step");
+        const prevStep = document.getElementById(`step-${stepNumber}`);
+
+        currentStep.classList.add("hidden-step");
+        currentStep.classList.remove("active-step");
+        prevStep.classList.remove("hidden-step");
+        prevStep.classList.add("active-step");
+      }
+
+      function validateForm(step) {
+        const inputs = step.querySelectorAll("input");
+        let valid = true;
+
+        inputs.forEach((input) => {
+          if (!input.value) {
+            valid = false;
+            input.classList.add("border-red-500");
+          } else {
+            input.classList.remove("border-red-500");
+          }
+        });
+
+        return valid;
+      }
+
+      function displayReview() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const address = document.getElementById("address").value;
+        const city = document.getElementById("city").value;
+
+        document.getElementById("review-name").innerText = name;
+        document.getElementById("review-email").innerText = email;
+        document.getElementById("review-address").innerText = address;
+        document.getElementById("review-city").innerText = city;
+
+        formData = { name, email, address, city };
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+
+        document.getElementById("step-3").classList.add("hidden-step");
+        document.getElementById("step-3").classList.remove("active-step");
+        document.getElementById("result-card").classList.remove("hidden-step");
+        document.getElementById("result-card").classList.add("active-step");
+
+        document.getElementById("result-name").innerText = formData.name;
+        document.getElementById("result-email").innerText = formData.email;
+        document.getElementById("result-address").innerText = formData.address;
+        document.getElementById("result-city").innerText = formData.city;
+      }
+    </script>
+  </body>
+</html>
