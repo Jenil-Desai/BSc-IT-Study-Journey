@@ -2,7 +2,7 @@ package create.table;
 
 import java.sql.*;
 
-public class DisplayStudentData {
+public class Program4 {
     public static void main(String[] args) {
         try {
          Class.forName("com.mysql.jdbc.Driver");
