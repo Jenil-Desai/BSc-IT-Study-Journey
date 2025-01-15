@@ -17,7 +17,7 @@ public class CreateTable {
                     + "Phone VARCHAR(15)"
                     + ")";
             PreparedStatement pr = con.prepareStatement(qry);
-            
+            int res = pr.executeUpdate();
             System.out.println("Table Created");
         } catch (Exception e) {
             System.out.println("Error : " + e);

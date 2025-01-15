@@ -12,4 +12,5 @@ def fibonacci_pyramid(n):
                 index += 1
         print()
 
-fibonacci_pyramid(5)
+number = int(input("Enter An Number : "))
+fibonacci_pyramid(number)

@@ -1,5 +1,5 @@
-a = 10
-b = 5
+a = int(input("Enter First Number : "))
+b = int(input("Enter Second Number : "))
 
 addition = a + b
 print("Addition:", addition)

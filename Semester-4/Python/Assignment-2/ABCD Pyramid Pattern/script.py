@@ -9,4 +9,5 @@ def print_pattern(n):
             index += 1
         print()
 
+number = int(input("Enter An Number : "))
 print_pattern(4)
