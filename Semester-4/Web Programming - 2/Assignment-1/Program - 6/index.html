@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
+        <form action="script.php" method="POST">
+            <div class="input-container">
+                <input type="number" name="num1" placeholder="Enter first number" required>
+                <input type="number" name="num2" placeholder="Enter second number" required>
+            </div>
+            <div class="button-container">
+                <button type="submit" name="operation" value="add">Add</button>
+                <button type="submit" name="operation" value="subtract">Subtract</button>
+                <button type="submit" name="operation" value="multiply">Multiply</button>
+                <button type="submit" name="operation" value="divide">Divide</button>
+            </div>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+</body>
+</html>
