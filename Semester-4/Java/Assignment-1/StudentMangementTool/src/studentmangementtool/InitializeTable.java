@@ -17,7 +17,7 @@ public class InitializeTable {
            db.executeUpdate();
            GlobalConfigs.printSuccess("Table Created Successfully");
         } catch (Exception e) {
-            GlobalConfigs.printError(e + "");
+            GlobalConfigs.printError(e);
         }
     }
 }

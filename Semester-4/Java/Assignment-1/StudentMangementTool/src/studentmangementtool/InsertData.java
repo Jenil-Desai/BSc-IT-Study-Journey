@@ -8,19 +8,19 @@ public class InsertData {
         try {
             Scanner sc = new Scanner(System.in);
             
-            System.out.println("Enter Roll No  : ");
+            System.out.print("Enter Roll No  : ");
             int rollno = sc.nextInt();
             
-            System.out.println("Enter Name     : ");
+            System.out.print("Enter Name     : ");
             String name = sc.next();
             
-            System.out.println("Enter City     : ");
+            System.out.print("Enter City     : ");
             String city = sc.next();
             
-            System.out.println("Enter State    : ");
+            System.out.print("Enter State    : ");
             String state = sc.next();
             
-            System.out.println("Enter Phone No : ");
+            System.out.print("Enter Phone No : ");
             String phone = sc.next();
             
             String insertSingleRecord = "INSERT INTO student(Rollno,Name,City,State,Phone) VALUES(?, ?, ?, ?, ?)";
@@ -34,9 +34,9 @@ public class InsertData {
             
             int result = db.executeUpdate();
             if (result > 0) {
-                GlobalConfigs.printSuccess(result + " Records Inserted");
+                GlobalConfigs.printSuccess(result + " Record Inserted");
             } else {
-                GlobalConfigs.printWarning("No Records Inserted");
+                GlobalConfigs.printWarning("No Record Inserted");
             }
         } catch (Exception e) {
             GlobalConfigs.printError(e + "");

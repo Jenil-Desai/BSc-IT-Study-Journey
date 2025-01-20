@@ -1,7 +1,6 @@
 package studentmangementtool;
 
 import java.sql.*;
-import java.io.*;
 
 public class GlobalConfigs {
     public static String RED_TEXT = "\u001B[31m";
@@ -31,7 +30,6 @@ public class GlobalConfigs {
     
     public static PreparedStatement getDatabaseConnection(String qry) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql:///" + DATABASE,USERNAME,PASSWORD);
             
             PreparedStatement pr = con.prepareStatement(qry);

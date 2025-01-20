@@ -28,6 +28,12 @@ public class StudentMangementTool {
                case 2:
                    InsertData.singleInsert();
                    break;
+               case 3:
+                   DeleteData.singleDelete();
+                   break;
+               case 5:
+                   ShowData.showAllData();
+                   break;
                case 6:
                    System.exit(0);
                default:
