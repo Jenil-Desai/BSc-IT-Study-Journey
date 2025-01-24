@@ -13,9 +13,8 @@ public class StudentMangementTool {
            System.out.println("| 1. Initialize Table |");
            System.out.println("| 2. Insert Record    |");
            System.out.println("| 3. Delete Record    |");
-           System.out.println("| 4. Update Record    |");
-           System.out.println("| 5. Show Record      |");
-           System.out.println("| 6. Exit             |");
+           System.out.println("| 4. Show Record      |");
+           System.out.println("| 5. Exit             |");
            System.out.println("|=====================|");
            System.out.print("\nEnter Choice : ");
            choice = sc.nextInt();
@@ -31,10 +30,10 @@ public class StudentMangementTool {
                case 3:
                    DeleteData.singleDelete();
                    break;
-               case 5:
+               case 4:
                    ShowData.showAllData();
                    break;
-               case 6:
+               case 5:
                    System.exit(0);
                default:
                    GlobalConfigs.printError("Invalid Choice");
