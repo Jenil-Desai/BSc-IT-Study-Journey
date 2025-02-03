@@ -32,6 +32,9 @@ public class Program3 extends javax.swing.JFrame {
         num2 = new javax.swing.JTextField();
         add = new javax.swing.JButton();
         result = new javax.swing.JLabel();
+        sub = new javax.swing.JButton();
+        multi = new javax.swing.JButton();
+        div = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +55,27 @@ public class Program3 extends javax.swing.JFrame {
             }
         });
 
+        sub.setText("Subtraction");
+        sub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subActionPerformed(evt);
+            }
+        });
+
+        multi.setText("Multiplication");
+        multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiActionPerformed(evt);
+            }
+        });
+
+        div.setText("Divison");
+        div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,14 +88,20 @@ public class Program3 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(num1, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(add)
-                            .addComponent(result))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(num2)))
+                        .addComponent(num2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(result)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(multi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(div, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -86,8 +116,14 @@ public class Program3 extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(add)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(add)
+                    .addComponent(sub))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(multi)
+                    .addComponent(div))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                 .addComponent(result)
                 .addGap(73, 73, 73))
         );
@@ -104,6 +140,24 @@ public class Program3 extends javax.swing.JFrame {
         float n2 = Float.parseFloat(num2.getText());
         result.setText((n1 + n2) + "");
     }//GEN-LAST:event_addActionPerformed
+
+    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 - n2) + "");
+    }//GEN-LAST:event_subActionPerformed
+
+    private void multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 * n2) + "");
+    }//GEN-LAST:event_multiActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 / n2) + "");
+    }//GEN-LAST:event_divActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,10 +196,13 @@ public class Program3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
+    private javax.swing.JButton div;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton multi;
     private javax.swing.JTextField num1;
     private javax.swing.JTextField num2;
     private javax.swing.JLabel result;
+    private javax.swing.JButton sub;
     // End of variables declaration//GEN-END:variables
 }
