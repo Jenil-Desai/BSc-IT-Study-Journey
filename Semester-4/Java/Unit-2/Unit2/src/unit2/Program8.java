@@ -4,9 +4,6 @@
  */
 package unit2;
 
-import java.awt.Color;
-import java.awt.Container;
-
 /**
  *
  * @author jenildesai
@@ -14,7 +11,7 @@ import java.awt.Container;
 public class Program8 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Program8
+     * Creates new form Program3
      */
     public Program8() {
         initComponents();
@@ -29,41 +26,53 @@ public class Program8 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        red = new javax.swing.JScrollBar();
-        green = new javax.swing.JScrollBar();
-        blue = new javax.swing.JScrollBar();
+        jLabel1 = new javax.swing.JLabel();
+        num1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        num2 = new javax.swing.JTextField();
+        add = new javax.swing.JButton();
+        result = new javax.swing.JLabel();
+        sub = new javax.swing.JButton();
+        multi = new javax.swing.JButton();
+        div = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Scroll Based Window Color");
-        setBackground(new java.awt.Color(255, 192, 203));
-        setResizable(false);
 
-        red.setMaximum(255);
-        red.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        red.setToolTipText("Red");
-        red.setValue(255);
-        red.addAdjustmentListener(new java.awt.event.AdjustmentListener() {
-            public void adjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {
-                redAdjustmentValueChanged(evt);
+        jLabel1.setText("Number 1 :-");
+
+        jLabel2.setText("Number 2 :-");
+
+        num2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num2ActionPerformed(evt);
             }
         });
 
-        green.setMaximum(255);
-        green.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        green.setToolTipText("Green");
-        green.setValue(192);
-        green.addAdjustmentListener(new java.awt.event.AdjustmentListener() {
-            public void adjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {
-                greenAdjustmentValueChanged(evt);
+        add.setText("Addition");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
             }
         });
 
-        blue.setMaximum(255);
-        blue.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
-        blue.setValue(203);
-        blue.addAdjustmentListener(new java.awt.event.AdjustmentListener() {
-            public void adjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {
-                blueAdjustmentValueChanged(evt);
+        sub.setText("Subtraction");
+        sub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subActionPerformed(evt);
+            }
+        });
+
+        multi.setText("Multiplication");
+        multi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiActionPerformed(evt);
+            }
+        });
+
+        div.setText("Divison");
+        div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divActionPerformed(evt);
             }
         });
 
@@ -71,49 +80,84 @@ public class Program8 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 42, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(red, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(green, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(blue, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(num1, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(num2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(result)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(multi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(div, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(red, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(green, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(blue, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(add)
+                    .addComponent(sub))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(multi)
+                    .addComponent(div))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addComponent(result)
+                .addGap(73, 73, 73))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    int r,g,b;
-    public void setColor() {
-        Container container = getContentPane();
-        container.setBackground(new Color(r,g,b));
-    }
-    
-    private void redAdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_redAdjustmentValueChanged
-        r = red.getValue();
-        setColor();
-    }//GEN-LAST:event_redAdjustmentValueChanged
+    private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num2ActionPerformed
 
-    private void greenAdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_greenAdjustmentValueChanged
-        g = green.getValue();
-        setColor();
-    }//GEN-LAST:event_greenAdjustmentValueChanged
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 + n2) + "");
+    }//GEN-LAST:event_addActionPerformed
 
-    private void blueAdjustmentValueChanged(java.awt.event.AdjustmentEvent evt) {//GEN-FIRST:event_blueAdjustmentValueChanged
-        b = blue.getValue();
-        setColor();
-    }//GEN-LAST:event_blueAdjustmentValueChanged
+    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 - n2) + "");
+    }//GEN-LAST:event_subActionPerformed
+
+    private void multiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 * n2) + "");
+    }//GEN-LAST:event_multiActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        float n1 = Float.parseFloat(num1.getText());
+        float n2 = Float.parseFloat(num2.getText());
+        result.setText((n1 / n2) + "");
+    }//GEN-LAST:event_divActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,6 +185,7 @@ public class Program8 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Program8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -151,8 +196,14 @@ public class Program8 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollBar blue;
-    private javax.swing.JScrollBar green;
-    private javax.swing.JScrollBar red;
+    private javax.swing.JButton add;
+    private javax.swing.JButton div;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton multi;
+    private javax.swing.JTextField num1;
+    private javax.swing.JTextField num2;
+    private javax.swing.JLabel result;
+    private javax.swing.JButton sub;
     // End of variables declaration//GEN-END:variables
 }

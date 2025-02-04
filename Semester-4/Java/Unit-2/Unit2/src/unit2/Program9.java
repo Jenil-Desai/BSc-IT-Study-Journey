@@ -4,18 +4,18 @@
  */
 package unit2;
 
-import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author jenildesai
  */
-public class Program6 extends javax.swing.JFrame {
+public class Program9 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Program6
+     * Creates new form Program4
      */
-    public Program6() {
+    public Program9() {
         initComponents();
     }
 
@@ -28,15 +28,20 @@ public class Program6 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        box = new javax.swing.JComboBox<>();
-        label = new javax.swing.JLabel();
+        c1 = new javax.swing.JCheckBox();
+        c2 = new javax.swing.JCheckBox();
+        btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Apple", "Mango" }));
-        box.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxItemStateChanged(evt);
+        c1.setText("Tea - Rs.20");
+
+        c2.setText("Coffee - Rs.10");
+
+        btn.setText("Submit");
+        btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActionPerformed(evt);
             }
         });
 
@@ -47,34 +52,45 @@ public class Program6 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(c1)
+                            .addComponent(c2))
+                        .addGap(0, 51, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(c1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label)
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addComponent(c2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxItemStateChanged
-        String fruit = box.getSelectedItem().toString();
-        switch (fruit) {
-            case "Apple":
-                label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Apple.jpg"));
-                break;
-            case "Mango":
-                label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Mango.jpg"));
-                break;
+    private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
+        String msg = "";
+        int amt = 0;
+        
+        if (c1.isSelected()) {
+            msg += "\nTea - Rs.20";
+            amt += 20;
         }
-    }//GEN-LAST:event_boxItemStateChanged
+        
+        if (c2.isSelected()) {
+            msg += "\nCoffee - Rs.10";
+            amt += 10;
+        }
+        
+        JOptionPane.showMessageDialog(rootPane, msg + "\nTotal = " + amt);
+    }//GEN-LAST:event_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,26 +109,28 @@ public class Program6 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program6.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program6().setVisible(true);
+                new Program9().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> box;
-    private javax.swing.JLabel label;
+    private javax.swing.JButton btn;
+    private javax.swing.JCheckBox c1;
+    private javax.swing.JCheckBox c2;
     // End of variables declaration//GEN-END:variables
 }

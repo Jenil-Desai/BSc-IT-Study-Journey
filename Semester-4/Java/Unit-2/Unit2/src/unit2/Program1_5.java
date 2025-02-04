@@ -2,7 +2,7 @@ package unit2;
 
 import javax.swing.*;
 
-public class Unit2 {
+public class Program1_5 {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Swings Componets");
         JPanel panel = new JPanel();

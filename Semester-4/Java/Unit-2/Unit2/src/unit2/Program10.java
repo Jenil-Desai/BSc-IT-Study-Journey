@@ -4,18 +4,18 @@
  */
 package unit2;
 
-import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author jenildesai
  */
-public class Program4 extends javax.swing.JFrame {
+public class Program10 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Program4
+     * Creates new form Program5
      */
-    public Program4() {
+    public Program10() {
         initComponents();
     }
 
@@ -28,20 +28,26 @@ public class Program4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        c1 = new javax.swing.JCheckBox();
-        c2 = new javax.swing.JCheckBox();
-        btn = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        rb1 = new javax.swing.JRadioButton();
+        rb2 = new javax.swing.JRadioButton();
+        label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        c1.setText("Tea - Rs.20");
-
-        c2.setText("Coffee - Rs.10");
-
-        btn.setText("Submit");
-        btn.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rb1);
+        rb1.setText("Mango");
+        rb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActionPerformed(evt);
+                rb1ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(rb2);
+        rb2.setText("Apple");
+        rb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb2ActionPerformed(evt);
             }
         });
 
@@ -52,45 +58,39 @@ public class Program4 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(c1)
-                            .addComponent(c2))
-                        .addGap(0, 51, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(rb1)
+                        .addGap(18, 18, 18)
+                        .addComponent(rb2))
+                    .addComponent(label))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(c1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(c2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb1)
+                    .addComponent(rb2))
+                .addGap(18, 18, 18)
+                .addComponent(label)
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-        String msg = "";
-        int amt = 0;
-        
-        if (c1.isSelected()) {
-            msg += "\nTea - Rs.20";
-            amt += 20;
+    private void rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1ActionPerformed
+        if (rb1.isSelected()) {
+            label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Mango.jpg"));
         }
-        
-        if (c2.isSelected()) {
-            msg += "\nCoffee - Rs.10";
-            amt += 10;
+    }//GEN-LAST:event_rb1ActionPerformed
+
+    private void rb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb2ActionPerformed
+        if (rb2.isSelected()) {
+            label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Apple.jpg"));
         }
-        
-        JOptionPane.showMessageDialog(rootPane, msg + "\nTotal = " + amt);
-    }//GEN-LAST:event_btnActionPerformed
+    }//GEN-LAST:event_rb2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,27 +109,29 @@ public class Program4 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program10.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program4().setVisible(true);
+                new Program10().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn;
-    private javax.swing.JCheckBox c1;
-    private javax.swing.JCheckBox c2;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel label;
+    private javax.swing.JRadioButton rb1;
+    private javax.swing.JRadioButton rb2;
     // End of variables declaration//GEN-END:variables
 }

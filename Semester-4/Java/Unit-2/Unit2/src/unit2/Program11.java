@@ -10,12 +10,12 @@ import javax.swing.ImageIcon;
  *
  * @author jenildesai
  */
-public class Program5 extends javax.swing.JFrame {
+public class Program11 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Program5
+     * Creates new form Program6
      */
-    public Program5() {
+    public Program11() {
         initComponents();
     }
 
@@ -28,26 +28,15 @@ public class Program5 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        rb1 = new javax.swing.JRadioButton();
-        rb2 = new javax.swing.JRadioButton();
+        box = new javax.swing.JComboBox<>();
         label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        buttonGroup1.add(rb1);
-        rb1.setText("Mango");
-        rb1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rb1ActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(rb2);
-        rb2.setText("Apple");
-        rb2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rb2ActionPerformed(evt);
+        box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Apple", "Mango" }));
+        box.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxItemStateChanged(evt);
             }
         });
 
@@ -58,10 +47,7 @@ public class Program5 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(rb1)
-                        .addGap(18, 18, 18)
-                        .addComponent(rb2))
+                    .addComponent(box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -69,28 +55,26 @@ public class Program5 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb1)
-                    .addComponent(rb2))
-                .addGap(18, 18, 18)
+                .addComponent(box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(265, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb1ActionPerformed
-        if (rb1.isSelected()) {
-            label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Mango.jpg"));
+    private void boxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxItemStateChanged
+        String fruit = box.getSelectedItem().toString();
+        switch (fruit) {
+            case "Apple":
+                label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Apple.jpg"));
+                break;
+            case "Mango":
+                label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Mango.jpg"));
+                break;
         }
-    }//GEN-LAST:event_rb1ActionPerformed
-
-    private void rb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb2ActionPerformed
-        if (rb2.isSelected()) {
-            label.setIcon(new ImageIcon("/Volumes/Data/Github/BSc-IT-Study-Journey/Semester-4/Java/Unit-2/Unit2/src/unit2/Apple.jpg"));
-        }
-    }//GEN-LAST:event_rb2ActionPerformed
+    }//GEN-LAST:event_boxItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -109,28 +93,27 @@ public class Program5 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program5().setVisible(true);
+                new Program11().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> box;
     private javax.swing.JLabel label;
-    private javax.swing.JRadioButton rb1;
-    private javax.swing.JRadioButton rb2;
     // End of variables declaration//GEN-END:variables
 }
