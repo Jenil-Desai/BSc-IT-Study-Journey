@@ -27,3 +27,4 @@ __pycache__
 *.form
 /Semester-4/Java/Assignment-2/Assignment2/nbproject/private/
 /Semester-4/Java/Assignment-2/Assignment2/build/
+.venv
