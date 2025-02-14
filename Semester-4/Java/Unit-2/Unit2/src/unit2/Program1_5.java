@@ -41,7 +41,11 @@ public class Program1_5 {
         panel.add(drop);
         
         DefaultListModel listModel = new DefaultListModel();
-        JList list = new JList();
+        listModel.addElement("Option 1");
+        listModel.addElement("Option 2");
+        
+        JList list = new JList(listModel);
+        panel.add(list);
         
         frame.setSize(1000,1000);
         frame.setVisible(true);
