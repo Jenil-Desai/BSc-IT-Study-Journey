@@ -20,9 +20,15 @@ public class program3to5 extends HttpServlet {
                 out.println("<body>");
                     String ta = request.getParameter("textarea");
                     String dd = request.getParameter("dropdown");
+                    String cb[] = request.getParameterValues("checkbox");
                     out.println("Textarea : " + ta);
                     out.println("<br>");
                     out.println("Dropdown : " + dd);
+                    out.println("<br>");
+                    out.println("Checkbox : ");
+                    for (String s : cb) {
+                        out.print(s + "\n");
+                    }
                 out.println("</body>");
             out.println("</html>");
         }
