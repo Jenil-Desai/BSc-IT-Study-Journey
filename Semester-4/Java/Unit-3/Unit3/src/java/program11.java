@@ -2,35 +2,22 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/program3to5"})
-public class program3to5 extends HttpServlet {
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+@WebServlet(urlPatterns = {"/program11"})
+public class program11 extends HttpServlet {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-                out.println("<head>");
-                    out.println("<title>Servlet program3to5</title>");
-                out.println("</head>");
-                out.println("<body>");
-                    String ta = request.getParameter("textarea");
-                    String dd = request.getParameter("dropdown");
-                    String cb[] = request.getParameterValues("checkbox");
-                    out.println("Textarea : " + ta);
-                    out.println("<br>");
-                    out.println("Dropdown : " + dd);
-                    out.println("<br>");
-                    out.println("Checkbox : ");
-                    for (String s : cb) {
-                        out.print(s + "\n");
-                    }
-                out.println("</body>");
-            out.println("</html>");
+            Cookie ck = new Cookie("cookieName",request.getParameter("cookieValue"));
+            ck.setMaxAge(60 * 60 * 24);
+            
+            response.addCookie(ck);
+            response.sendRedirect("program11part2");
         }
     }
 

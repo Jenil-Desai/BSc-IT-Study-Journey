@@ -6,8 +6,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import static java.lang.System.out;
 
-@WebServlet(urlPatterns = {"/program6"})
-public class program6 extends HttpServlet {
+@WebServlet(urlPatterns = {"/program8"})
+public class program8 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         

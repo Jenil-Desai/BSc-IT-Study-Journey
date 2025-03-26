@@ -8,8 +8,8 @@ import static java.lang.System.out;
 
 import java.sql.*;
 
-@WebServlet(urlPatterns = {"/program7"})
-public class program7 extends HttpServlet {
+@WebServlet(urlPatterns = {"/program9"})
+public class program9 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
