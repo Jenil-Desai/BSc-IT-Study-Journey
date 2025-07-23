@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Semester-5", "Semester-5", "{4E7384E4-245A-4182-6903-7C48A46EEC60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C Sharp", "C Sharp", "{B91E9A7B-453E-0B55-A6FD-2084A8BF73CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit-2", "Unit-2", "{34C9074D-9D4A-B0AD-291D-07D822151540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String Formmatting", "Semester-5\C Sharp\Unit-2\String Formmatting\String Formmatting.csproj", "{3296096C-D581-48EA-945C-4694CB90B892}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3296096C-D581-48EA-945C-4694CB90B892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Debug|x64.Build.0 = Debug|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Debug|x86.Build.0 = Debug|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Release|x64.ActiveCfg = Release|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Release|x64.Build.0 = Release|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Release|x86.ActiveCfg = Release|Any CPU
+		{3296096C-D581-48EA-945C-4694CB90B892}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B91E9A7B-453E-0B55-A6FD-2084A8BF73CE} = {4E7384E4-245A-4182-6903-7C48A46EEC60}
+		{34C9074D-9D4A-B0AD-291D-07D822151540} = {B91E9A7B-453E-0B55-A6FD-2084A8BF73CE}
+		{3296096C-D581-48EA-945C-4694CB90B892} = {34C9074D-9D4A-B0AD-291D-07D822151540}
+	EndGlobalSection
+EndGlobal
