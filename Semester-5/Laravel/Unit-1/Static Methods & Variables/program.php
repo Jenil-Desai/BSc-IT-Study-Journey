@@ -5,12 +5,11 @@
 
         public static function show() {
             echo self::$count;
-            echo $this->object_count;
         }
     }
 
     $obj = new VisitorTracker();
-    $obj::count++;
+    $obj::$count++;
     $obj->object_count++;
     $obj->show();
 ?>

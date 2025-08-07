@@ -2,7 +2,7 @@
 class Student {
     public $name, $rollno, $mark1, $mark2, $mark3, $total, $percentage, $grade;
 
-    function __construct($name, $rollno, $m1, $m2, $m3) {
+    public function  __construct($name, $rollno, $m1, $m2, $m3) {
         $this->name = $name;
         $this->rollno = $rollno;
         $this->mark1 = $m1;
